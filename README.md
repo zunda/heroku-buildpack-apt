@@ -65,6 +65,9 @@ Include a list of apt package names to be installed in a file named `Aptfile`
 	irb(main):002:0> PG::version_string
 	=> "PG 0.15.1"
 	
+## TODO
+`dpkg: error: requested operation requires superuser privilege`
+
 ## License
 
 MIT
