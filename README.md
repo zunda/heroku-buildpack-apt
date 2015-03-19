@@ -66,7 +66,7 @@ Include a list of apt package names to be installed in a file named `Aptfile`
 	=> "PG 0.15.1"
 	
 ## TODO
-`dpkg: error: requested operation requires superuser privilege`
+`dpkg: error: requested operation requires superuser privilege` - add `--force-not-root` option? http://askubuntu.com/a/350
 
 ## License
 
