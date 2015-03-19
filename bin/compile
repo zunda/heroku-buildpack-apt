@@ -29,6 +29,12 @@ function indent() {
   esac
 }
 
+topic "Info"
+id | indent
+echo BUILD_DIR $BUILD_DIR | indent
+echo CACHE_DIR $CACHE_DIR | indent
+echo LP_DIR $LP_DIR | indent
+
 APT_CACHE_DIR="$CACHE_DIR/apt/cache"
 APT_STATE_DIR="$CACHE_DIR/apt/state"
 
