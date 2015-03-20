@@ -62,7 +62,10 @@ done
 mkdir -p $BUILD_DIR/.apt
 
 topic "Installing .debs"
-cp -pr /var/lib/dpkg/ $BUILD_DIR/.apt/
+mkdir -p $BUILD_DIR/.apt/var/lib
+cp -pr /var/lib/dpkg/ $BUILD_DIR/.apt/var/lib/ || :
+touch $BUILD_DIR/.apt/var/lib/dpkg/triggers/Lock
+touch $BUILD_DIR/.apt/var/lib/dpkg/lock
 dpkg --install --force-not-root --recursive --root=$BUILD_DIR/.apt/ $APT_CACHE_DIR/archives/
 
 topic "Writing profile script"
