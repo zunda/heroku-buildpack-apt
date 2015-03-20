@@ -68,6 +68,17 @@ Include a list of apt package names to be installed in a file named `Aptfile`
 ## TODO
 `dpkg: error: requested operation requires superuser privilege` - add `--force-not-root` option? http://askubuntu.com/a/350 -> `dpkg: error: unable to access dpkg status area: No such file or directory`
 
+Copying just /var/lib/dpkg resulted with an error from `dpkg`:
+
+```
+dpkg: warning: 'ldconfig' not found in PATH or not executable
+dpkg: warning: 'start-stop-daemon' not found in PATH or not executable
+dpkg: error: 2 expected programs not found in PATH or not executable
+Note: root's PATH should usually contain /usr/local/sbin, /usr/sbin and /sbin
+```
+
+This might not be the right way to go...
+
 ## License
 
 MIT
