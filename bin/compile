@@ -62,6 +62,7 @@ done
 mkdir -p $BUILD_DIR/.apt
 
 topic "Installing .debs"
+cp -pr /var/lib/dpkg/ $BUILD_DIR/.apt/
 dpkg --install --force-not-root --recursive --root=$BUILD_DIR/.apt/ $APT_CACHE_DIR/archives/
 
 topic "Writing profile script"
